@@ -10,8 +10,7 @@
 
 ## Evidence still to collect
 
-- Capture the first commit's file list and Vercel's Deployments list. The first commit must show the specs and app files, with no `node_modules`, `.next`, `.env.local`, or key file.
-- Capture GitHub's commit history after all pushes. Later documentation commits should be described accurately; the initial app and security fix were built before Git was initialized.
+- Actual first-commit, commit-history, Vercel-deployment, and public-app screenshots have been saved under `evidence/*-actual.png` and embedded in the submission draft. The history screenshot shows three commits before the screenshot-attachment commit. Later documentation commits are described accurately; the initial app and security fix were built before Git was initialized.
 - Obtain actual screenshots of test/build output. The existing PNG files are generated summaries of actual earlier runs, not original terminal screenshots; see `evidence/README.md`.
 - Check the Canvas gallery post. Neither the URL nor repository has been posted to Canvas by Codex. The assignment's due-date labels differ, so verify the current deadline in Canvas rather than assuming it from the PDF.
 

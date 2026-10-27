@@ -10,11 +10,15 @@
 
 ### First commit file list
 
-[INSERT SCREENSHOT: first commit file list. Confirm there is no `node_modules`, `.next`, `.env.local`, `sources`, or key file.]
+Actual GitHub file list at the first commit, `a82f974`. The root includes `docs/`, app code, and `.gitignore`; excluded dependencies, environment files, and course PDFs are absent.
+
+![First commit file list](../evidence/github-first-commit-actual.png)
 
 ### Vercel deployments
 
-[INSERT SCREENSHOT: Vercel Deployments list showing the first deployment and later automatic deployments.]
+Actual Vercel Deployments list showing the initial deployment and the two automatic follow-up deployments, all Ready.
+
+![Vercel deployments](../evidence/vercel-deployments-actual.png)
 
 ## Part B - Build the next story, tests first
 
@@ -52,9 +56,13 @@ Codex ran these checks in a browser against the public Vercel URL on October 26,
 | Asked `What is the dining hall menu tomorrow?` | State that the answer cannot be determined from the available materials. | Refused the unsupported question and displayed no citation. |
 | Left the question blank and clicked Ask. | Reject an empty question. | Displayed `Enter your name and a course question.` and added no answer. |
 
+![Public app with citation, refusal, and validation feedback](../evidence/live-app-checks-actual.png)
+
 ### Commit history
 
-[INSERT SCREENSHOT: GitHub commit history showing the first commit plus at least two descriptive later commits.]
+Actual GitHub history showing the first app commit and two descriptive documentation commits. The documentation commits record the deployment checks and assemble the submission; they do not represent the original feature/security implementation sequence.
+
+![GitHub commit history](../evidence/github-commit-history-actual.png)
 
 ## Part C - Close one security gap
 

@@ -1,0 +1,11 @@
+node_modules
+.next
+.env*
+.env.local
+!.env.example
+coverage
+*.log
+tmp
+/sources
+AGENTS.md
+/scripts/search_course_pdfs.py

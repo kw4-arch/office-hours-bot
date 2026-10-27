@@ -1,0 +1,15 @@
+Part B - failing test before Story 2 implementation
+
+RUN  v4.0.3
+
+PASS tests/story-1-grounded-answer.test.ts (2 tests)
+FAIL tests/story-2-source-citation.test.ts (1 test | 1 failed)
+  x a grounded answer identifies its source document and page
+
+AssertionError: expected { Object (answer) } to match object
+{ sources: [{ document: "07 - How Large Language Models Work", page: 47 }] }
+
+Test Files  1 failed | 1 passed (2)
+Tests       1 failed | 2 passed (3)
+
+Captured from the real Vitest run before the citation implementation on 2026-10-26.

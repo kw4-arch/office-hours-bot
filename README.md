@@ -2,6 +2,14 @@
 
 A deterministic, course-grounded Next.js prototype for 70-445. It retrieves from a small approved index derived from course lecture materials and never uses unrestricted internet sources or an LLM API.
 
+## Live app
+
+- Production: https://office-hours-bot-eight.vercel.app/
+- Public repository: https://github.com/kw4-arch/office-hours-bot
+- Vercel project: https://vercel.com/brodream913/office-hours-bot
+
+The first production deployment was verified on October 26, 2026. The browser checks are recorded in `evidence/part-b-live-checks.md`. Pushes to `main` are connected to Vercel for automatic production deployments.
+
 ## Run locally
 
 ```bash

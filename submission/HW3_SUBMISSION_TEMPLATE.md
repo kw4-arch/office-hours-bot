@@ -2,9 +2,9 @@
 
 **Name:** wyulin.kevin
 
-**Live Vercel URL:** [VERCEL URL]
+**Live Vercel URL:** https://office-hours-bot-eight.vercel.app/
 
-**Public GitHub repository:** [GITHUB URL]
+**Public GitHub repository:** https://github.com/kw4-arch/office-hours-bot
 
 ## Part A - Put it on GitHub and on the web
 
@@ -44,7 +44,13 @@ User Story 2: As a student, I want to know where an answer came from so that I c
 
 ### Live URL checks
 
-After deployment, repeat the checks in `evidence/part-b-live-checks.md` on the `.vercel.app` URL and paste the final table here.
+Codex ran these checks in a browser against the public Vercel URL on October 26, 2026.
+
+| What I tried | What the spec says should happen | What happened |
+|---|---|---|
+| Entered `Demo Student`, asked `How do tokens and embeddings differ?`, and clicked Ask. | Return a course-grounded answer with a document and page citation. | Explained tokens and embeddings and displayed `07 - How Large Language Models Work · p. 47`. |
+| Asked `What is the dining hall menu tomorrow?` | State that the answer cannot be determined from the available materials. | Refused the unsupported question and displayed no citation. |
+| Left the question blank and clicked Ask. | Reject an empty question. | Displayed `Enter your name and a course question.` and added no answer. |
 
 ### Commit history
 
@@ -54,7 +60,10 @@ After deployment, repeat the checks in `evidence/part-b-live-checks.md` on the `
 
 ### Audit row before and after
 
-[PASTE THE BEFORE/AFTER TABLE FROM `evidence/part-c-audit-before-after.md`.]
+| Version | Requirement | Status | Evidence and remaining gap |
+|---|---|---|---|
+| Before | SEC-6 Server-side input limits | Not at all | The page guides ordinary input, but the server accepts a question of any length. |
+| After | SEC-6 Server-side input limits | Fully | The server rejects questions over 500 characters and names over 80 characters; the page mirrors both limits for usability. Real production monitoring and shared rate limiting remain outside this rule. |
 
 ### Test evidence
 
@@ -64,7 +73,7 @@ After deployment, repeat the checks in `evidence/part-b-live-checks.md` on the `
 
 ### C-why
 
-[WRITE 2-3 SENTENCES EXPLAINING WHY THE SERVER, RATHER THAN ONLY THE PAGE, MUST ENFORCE INPUT LIMITS.]
+Draft for review: A visitor can bypass the page's character limit by sending a request directly to the server, so browser validation alone does not protect the app. The server must reject oversized inputs consistently before retrieval; an instruction to a model cannot control which requests the application accepts.
 
 ## Part D - Break someone else's app
 
@@ -106,4 +115,4 @@ After deployment, repeat the checks in `evidence/part-b-live-checks.md` on the `
 
 ## AI use disclosure
 
-Codex wrote the application code and tests and helped verify the build, organize evidence, and structure the submission. [ADD ANY OTHER AI USE AND CONFIRM WHICH ANALYSIS, RED-TEAM ATTEMPTS, AND FINAL JUDGMENTS ARE YOUR OWN.]
+Codex wrote the application code and tests, performed the Part B live checks, helped configure GitHub and Vercel, organized evidence, and drafted C-why and the submission structure. [ADD ANY OTHER AI USE, INCLUDING LATER COST RESEARCH OR MEMO DRAFTING, AND DESCRIBE WHO PERFORMED THE PART D ATTEMPTS.]
